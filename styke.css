@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transform-style:preserve-3d;
+}
+body{
+    background: #000;
+}
+.comsic-cube{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comsic-cube .comsic{
+    position: relative;
+    width: 700px;
+    height: 548px;
+    background: url("circle.jpg");
+}
+.comsic-cube .comsic .cube{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin-left:-40px;
+    margin-top: -40px;
+    transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    animation:hhh 100s linear;
+    animation-iteration-count:999;
+}
+@keyframes hhh{
+    100%{
+        transform:rotateX(3600deg) rotateY(3600deg) rotateZ(3600deg);
+    }
+}
+.comsic-cube .comsic .cube div{
+    width: 80px;
+    height: 80px;
+    border: 3px solid #5ff4f2;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    position: absolute;
+    color: #fff;
+    box-shadow: 0 0 200px #5ff4f2;
+}
+.comsic-cube .comsic .cube div:nth-of-type(1){
+    transform:translateY(-40px) rotateX(90deg);
+}
+.comsic-cube .comsic .cube div:nth-of-type(2){
+    transform: translateY(40px) rotateX(90deg);
+}
+.comsic-cube .comsic .cube div:nth-of-type(3){
+    transform: translateX(-40px) rotateY(90deg);
+}
+.comsic-cube .comsic .cube div:nth-of-type(4){
+    transform: translateX(40px) rotateY(90deg);
+}
+.comsic-cube .comsic .cube div:nth-of-type(5){
+    transform: translateZ(40px);
+}
+.comsic-cube .comsic .cube div:nth-of-type(6){
+    transform: translateZ(-40px);
+}
+
+.da{
+    animation:hhh 100s linear;
+    animation-iteration-count:999;
+    transform:rotateX(3600deg) rotateY(-360deg) rotateZ(3600deg);
+}
+.da .nimei{
+    position: absolute;
+    width: 50px;
+    height: 700px;
+    top: -350px;
+   border: 2px solid #5ff4f2;
+}
+.da .nimei a{
+    text-decoration: none;
+    display: block;
+    width: 30px;
+    height: 200px;
+    color: aqua;
+    line-height: 50px;
+  font-size: 40px;
+    margin-top:200px;
+}
+.nimei:nth-last-of-type(1){
+    transform:translateX(20px) rotateY(90deg);
+}
+.nimei:nth-last-of-type(2){
+    transform:translateX(-20px) rotateY(90deg);
+}
+.nimei:nth-last-of-type(3){
+    transform:translateZ(20px);
+}
+.nimei:nth-last-of-type(4){
+    transform:translateZ(-20px);
+}
+
